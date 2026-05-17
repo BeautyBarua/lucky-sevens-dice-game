@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Lucky Sevens - Player Info</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
+
+
+    <script src="js/intro.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>Lucky Sevens</h1>
+        <p>Enter your player information to begin</p>
+    </header>
+
+    <main>
+        <form id="playerForm" novalidate>
+            <div class="form-group">
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" name="firstName">
+            </div>
+
+            <div class="form-group">
+                <label for="lastName">Last Name:</label>
+                <input type="text" id="lastName" name="lastName">
+            </div>
+
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username">
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number (###.###.####):</label>
+                <input type="text" id="phone" name="phone">
+            </div>
+            <div class="form-group">
+                <label for="postal">Postal Code (e.g. A1A 1A1):</label>
+                <input type="text" id="postal" name="postal">
+            </div>
+
+
+            <div class="form-group">
+                <label for="city">City:</label>
+                <input type="text" id="city" name="city">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email">
+            </div>
+
+            <div class="form-group">
+                <label for="money">Starting Money ($5 to $5000):</label>
+                <input type="number" id="money" name="money">
+            </div>
+
+            <button type="submit">Start Game</button>
+            <button type="button" id="changeUser">Change Credentials</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Lucky Sevens Game</p>
+    </footer>
+    <script>
+        window.onerror = function (message, source, lineno, colno, error) {
+            alert("An unexpected error occurred. Restarting the game.");
+            localStorage.clear();
+            window.location.href = "intro.html";
+            return true;
+        };
+    </script>
+
+
+</body>
+
+</html>

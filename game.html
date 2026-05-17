@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Lucky Sevens Game</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles/styles.css">
+
+  <!-- jQuery (for animation/effects) -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+  <script src="js/gameLogic.js"></script>
+</head>
+
+<body>
+
+  <header>
+    <h1>Lucky Sevens</h1>
+  </header>
+
+  <main>
+    <!-- User Info -->
+    <section id="playerInfo">
+      <p id="welcomeMsg"></p>
+      <p id="contactMsg"></p>
+      <p id="bankMsg"></p>
+      <p id="visitMsg"></p>
+      <p><a href="#" id="changeUser">Not you? Change your credentials</a></p>
+    </section>
+
+
+    <!-- Game Play -->
+    <section id="gameArea">
+      <form id="betForm">
+        <label for="betAmount">Enter your bet:</label>
+        <input type="number" id="betAmount" min="1">
+        <div class="error" id="betError"></div>
+
+        <label for="betType">Bet on:</label>
+        <select id="betType">
+          <option value="exactly7">Exactly 7 (4x)</option>
+          <option value="over7">Over 7 (1.5x)</option>
+          <option value="under7">Under 7 (1.5x)</option>
+        </select>
+
+        <button type="submit">Roll Dice</button>
+      </form>
+
+      <!-- Dice Display -->
+      <div id="diceContainer">
+        <img id="dice1" src="images/dice1.png" alt="Dice 1" width="100">
+        <img id="dice2" src="images/dice1.png" alt="Dice 2" width="100">
+      </div>
+
+      <!-- Result -->
+      <div id="gameResult" class="game-result"></div>
+    </section>
+
+    <!-- Exit Game -->
+    <section id="gameControls">
+      <button id="exitGame">Leave Game</button>
+    </section>
+
+    <!-- Goodbye Message -->
+    <section id="endMessage" style="display: none;">
+      <h2>Thanks for playing Lucky Sevens!</h2>
+      <p>Your final balance: $<span id="finalBank"></span></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Lucky Sevens | All Rights Reserved</p>
+  </footer>
+  <script>
+    window.onerror = function (message, source, lineno, colno, error) {
+      alert("An unexpected error occurred. Restarting the game.");
+      localStorage.clear();
+      window.location.href = "intro.html";
+      return true;
+    };
+  </script>
+
+
+</body>
+
+</html>
