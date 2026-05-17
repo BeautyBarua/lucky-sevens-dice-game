@@ -1,5 +1,7 @@
 # Lucky Sevens Dice Game
 
+🎮 **Live Website:** [Play Lucky Sevens Dice Game](https://beautybarua.github.io/lucky-sevens-dice-game/)
+
 Lucky Sevens is a one-player dice betting game built with HTML, CSS, JavaScript, jQuery, and localStorage.
 
 ## Features
@@ -20,7 +22,3 @@ Lucky Sevens is a one-player dice betting game built with HTML, CSS, JavaScript,
 - jQuery Validate
 - Canvas API
 - localStorage
-
-## Project Purpose
-
-This project was created as part of my Web Programming II coursework and later cleaned up for my portfolio.
